@@ -1,12 +1,12 @@
 # Basic
 titleHeader : 欢迎来到zwp博客
 title: zwp个人博客
-subtitle: 欢迎来到我的个人站~
+subtitle: 欢迎来到我的个人博客~
 description: 越努力越幸运
 # 头像里面的标题
 avatarTitle: learning
 # 头像里面的描述
-avatarDesc: 前端 / 技术
+avatarDesc: java / 技术
 url: "https://bszwp.github.io"
 
 # Comment
@@ -19,27 +19,27 @@ social:
 
     github: bszwp
     # twitter: 
-    mail: xiaoyu@xiaoyulive.top
+    mail: 1050474148@qq.com
 
 
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
 baidu:
-    #id: 8ba1c6be0953b6f9c2ba38e57f615421  
+    #id: 
 
 
 # Google Analytics
 # 使用博客模板请去掉或者更换 id
 ga:
-    #id: UA-84134159-3   
+    #id:   
     host: auto  
 
 
 # 《----------------- 上面的信息修改成你自己的 ---------------------------》
 #
 #
-#  _post/ 下的文章更换成你自己的文章
-#  帮忙star一下，感谢~😆 地址： https://github.com/leopardpan/leopardpan.github.io
+#  
+#  
 #
 #
 # 《--------------- 下面的信息可以自行选择是否修改 ------------------------》
