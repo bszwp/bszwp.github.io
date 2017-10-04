@@ -1,0 +1,7 @@
+{{ childrenArray | filter : 'a' }}//匹配属性值中含有a的
+
+{{ childrenArray | filter : 4 }}//匹配属性值中含有4的
+
+{{ childrenArray | filter : {name : 'i'} }}//参数是对象，匹配name属性中含有i的
+
+{{ childrenArray | filter : func }}//参数是函数，指定返回age>4的

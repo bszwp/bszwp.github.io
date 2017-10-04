@@ -1,0 +1,122 @@
+<header class="panel-cover {% if page.layout == 'post' or page.layout == 'page' %}panel-cover--collapsed{% endif %}">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+        <!-- 头像效果-start -->
+        <div class="ih-item circle effect right_to_left">            
+            <a href="/#blog" title="前往 {{ site.title }} 的主页" class="blog-button">
+                <div class="img"><img src="/images/avatar.jpg" alt="img"></div>
+                <div class="info">
+                    <div class="info-back">
+                        <h2> 
+                            {% if site.avatarTitle %}
+                                {{site.avatarTitle}}
+                            {% endif %}
+                        </h2>
+                        <p>
+                           {% if site.avatarDesc %}
+                                {{site.avatarDesc}}
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- 头像效果-end -->
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for {{ site.title }}" class="blog-button">{{ site.title }}</a></h1>
+        {% if site.subtitle %}
+        <span class="panel-cover__subtitle panel-subtitle">{{site.subtitle}}</span>
+        {% endif %}
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description">{{ site.description }}</p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        {% if site.welcome_message %}
+        <p class="panel-cover__description">{{ site.welcome_message }}</p>
+        {% endif %}
+        
+
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="{{site.blog_button.description}}" class="blog-button">{{site.blog_button.title}}</a></li>
+                {% for item in site.nav %}
+                  <li class="navigation__item"><a href="{{item.url}}" title="{{item.description}}">{{item.title}}</a></li>
+                {% endfor %}
+                <li class="navigation__item"><a href="http://xiaoyulive.top/welcome" title="小昱的个人简历" target="_blank" class="blog-button">个人简历</a></li>
+              </ul>
+            </nav>
+          </div>          
+        </div>
+        </div>
+
+        <!-- start section -->
+        <section class="footer">
+            <footer>
+                <div class="footer_div">  
+                <nav class="cover-navigation navigation--social">
+                  <ul class="navigation">
+                  <!-- Github -->
+                  <li class="navigation__item_social">
+                    <a href="https://github.com/quanzaiyu" title="@quanzaiyu 的 Github" target="_blank">
+                      <i class="social fa fa-github fa-2x"></i>
+                      <span class="label">Github</span>
+                    <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe></a>
+                  </li>
+                  <!-- Email -->
+                  <li class="navigation__item_social">
+                    <a href="mailto:xiaoyu@xiaoyulive.top" title="Contact me">
+                      <i class="social fa fa-envelope fa-2x"></i>
+                      <span class="label">Email</span>
+                    </a>
+                  </li>
+
+                  <!-- QQ -->
+                  <li class="navigation__item_social">
+                    <a target="_blank" title="小昱的QQ" href="http://wpa.qq.com/msgrd?v=3&uin=731734107&site=qq&menu=yes">
+                      <i class="social fa fa-qq fa-2x"></i>
+                        <span class="label">QQ</span>
+                      <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
+                    </a>
+                  </li>
+
+                  <!-- 简书 -->
+                  <li class="navigation__item_social">
+                    <a href="http://www.jianshu.com/u/2e74d0659da1" title="小昱的简书" target="_blank">
+                      <i class="social fa fa-book fa-2x"></i>
+                      <span class="label">简书</span>
+                    <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe></a>
+                  </li>
+
+                  </ul>
+                </nav>
+                </div>
+                <div class="footer_div">  
+                   <p class="copyright text-muted">
+                    Copyright © 小昱 2017 Theme by <a href="http://www.xiaoyulive.top/">quanzaiyu</a>
+                    </p>
+                    <div align="right">
+                        <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+                  <!-- 访问统计 -->
+                  <span id="busuanzi_container_site_pv" style="display: inline;">
+                    本站总访问量
+                    <span id="busuanzi_value_site_pv"></span>次
+                  </span>
+                </div>
+                <div>
+            </div></div></footer>
+        </section>
+        <!-- end section -->
+
+      </div>
+    </div>
+    
+    {% if site.cover_color %}
+    <div class="panel-cover--overlay cover-{{site.cover_color}}"></div>
+    {% else %}
+    <div class="panel-cover--overlay cover-disabled"></div>
+    {% endif %}
+  </div>
+</header>
