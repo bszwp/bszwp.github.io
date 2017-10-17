@@ -1,4 +1,4 @@
----
+﻿---
 layout: post
 title: "redis安装"
 date: 2017-10-17
@@ -10,25 +10,21 @@ redis官网地址：http://www.redis.io/(官网也有文档说明)
 准备：Redis是c语言开发的。
 安装redis需要c语言的编译环境。如果没有gcc需要在线安装。
 yum install gcc-c++ 如图（我的已经安装好了）
-![](https://bszwp.github.io/images/posts/redis/1.png)
-![此处输入图片的描述][1]
+![](../images/posts/redis/1.png)
 安装步骤
 1.redis的源码包上传到linux系统。
 2.解压缩:tar zxvf redis-3.0.0.tar
 3.编译：进入解压后的文件，你会看到一个makefile的编译文件，直接输入命令：make 编译即可。
-![](https://bszwp.github.io/images/posts/redis/5.png)
+![](../images/posts/redis/4.png)
 4.安装：make install PREFIX= /usr/local/redis(你安装的目录)
 5.启动：进入你安装目录下的bin会看到一个redis-server的文件
 ![](../images/posts/redis/6.png)
 输入命令：./redis-server即可启动，如下图，这是前端启动模式。
-![](https://bszwp.github.io/images/posts/redis/2.png)
+![](../images/posts/redis/2.png)
 6.后端启动：我们需要方便，所以需要后端启动，这时我们需要配置一下，我们将之前解压的redis文件夹中，复制一份redis.conf到usr/local/redis;命令：cp redis.conf /usr/local/redis/bin；然后vim编辑:vim redis.conf,修改daemonize yes,在运行即可，后台启动。
-![](https://bszwp.github.io/images/posts/redis/3.png)
+![](../images/posts/redis/3.png)
 7.查看：ps aux|grep redis 如下图，说明启动成功啦。
 8.关闭：第一种可以 kill 
 也可以：./redis-cli shutdown
-![](https://bszwp.github.io/images/posts/redis/5.png)
+![](../images/posts/redis/5.png)
 这样redis就按好了。
-
-
-  [1]: https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=998893491,2679530940&fm=27&gp=0.jpg
